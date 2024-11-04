@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我 - 我的博客</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">我的博客</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="contact.html">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-header">
+            <h1>联系我</h1>
+            <p>如果您有任何问题或合作���向，欢迎通过以下���式联系我</p>
+        </section>
+
+        <div class="contact-content">
+            <section class="contact-form-section">
+                <h2>发送消息</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">主题</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">消息内容</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">发送消息</button>
+                </form>
+            </section>
+
+            <section class="contact-info-section">
+                <h2>其他联系方式</h2>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="icon">📧</div>
+                        <h3>电子邮件</h3>
+                        <p>example@email.com</p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">💬</div>
+                        <h3>微信</h3>
+                        <p>WeChat_ID</p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">📱</div>
+                        <h3>社交媒体</h3>
+                        <div class="social-links">
+                            <a href="#" title="微博">微博</a>
+                            <a href="#" title="知乎">知乎</a>
+                            <a href="#" title="GitHub">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 我的博客. 保留所有权利.</p>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

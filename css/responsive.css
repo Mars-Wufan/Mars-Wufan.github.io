@@ -1,0 +1,265 @@
+/* 大屏幕设备 (1200px 及以上) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    /* 博客文章网格布局 */
+    .blog-posts {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* 中等屏幕设备 (992px 到 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    /* 博客文章网格布局 */
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    /* 文章详情页侧边栏 */
+    .article-container {
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* 平板设备 (768px 到 991px) */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* 导航栏样式 */
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    /* 博客文章布局 */
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    /* 关于页面布局 */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* 联系页面布局 */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* 手机设备 (576px 到 767px) */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+        padding: 0 1rem;
+    }
+    
+    /* 导航栏样式 */
+    header {
+        padding: 0.5rem 1rem;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    /* 移动端菜单 */
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    
+    /* 博客文章布局 */
+    .blog-posts {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* 文章详情页布局 */
+    .article-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-sidebar {
+        margin-top: 2rem;
+    }
+    
+    /* 关于页面布局 */
+    .profile-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    /* 联系页面表单 */
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+/* 小型手机设备 (575px 及以下) */
+@media (max-width: 575px) {
+    /* 页面标题 */
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* 文章卡片样式 */
+    .post {
+        padding: 1rem;
+    }
+    
+    /* 关于页面布局 */
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* 页脚样式 */
+    footer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* 返回顶部按钮 */
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* 深色主题响应式调整 */
+@media (max-width: 767px) {
+    [data-theme="dark"] .nav-links {
+        background: #2d2d2d;
+    }
+    
+    [data-theme="dark"] .nav-links a {
+        color: #f0f0f0;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    header,
+    footer,
+    .back-to-top,
+    .share-buttons,
+    .contact-form {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .article-content {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+    }
+    
+    @page {
+        margin: 2cm;
+    }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+    body {
+        background: #fff;
+        color: #000;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .post,
+    .article-content,
+    .contact-form-section {
+        border: 1px solid #000;
+    }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .back-to-top,
+    .nav-links,
+    .header {
+        transition: none !important;
+    }
+} 
