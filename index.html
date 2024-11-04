@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人博客</title>
+    <title>我的博客</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -12,36 +12,53 @@
         <nav>
             <div class="logo">我的博客</div>
             <ul class="nav-links">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="pages/about.html">关于我</a></li>
-                <li><a href="pages/contact.html">联系方式</a></li>
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="contact.html">联系我</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>欢迎来到我的博客</h1>
-            <p>在这里分享我的想法和经验</p>
+            <div class="hero-content">
+                <h1>欢迎来到我的博客</h1>
+                <p>在这里分享我的想法和经验</p>
+            </div>
         </section>
 
-        <section class="latest-posts">
+        <section class="blog-posts">
             <h2>最新文章</h2>
-            <div class="post-grid">
-                <article class="post-card">
-                    <h3>第一篇博客文章</h3>
-                    <p class="post-excerpt">这是第一篇博客文章的摘要...</p>
-                    <a href="pages/posts/post1.html" class="read-more">阅读更多</a>
+            <div class="posts-grid">
+                <article class="post">
+                    <div class="post-image">
+                        <img src="images/placeholder.jpg" alt="文章配图">
+                    </div>
+                    <div class="post-content">
+                        <h3>第一篇博客文章</h3>
+                        <div class="post-meta">
+                            <span class="date">2024-03-20</span>
+                            <span class="author">作者：我</span>
+                        </div>
+                        <p class="post-excerpt">这是第一篇博客文章的摘要内容...</p>
+                        <a href="articles/article1.html" class="read-more">阅读更多</a>
+                    </div>
                 </article>
-                <!-- 更多文章卡片 -->
+                <!-- 可以添加更多文章 -->
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 我的博客. 保留所有权利.</p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 我的博客. 保留所有权利.</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">关于我</a>
+                <a href="contact.html">联系我</a>
+            </div>
+        </div>
     </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
